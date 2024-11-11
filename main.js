@@ -148,15 +148,18 @@ const handleSubmit = async (e) => {
 
   loader(messageDiv);
 
-  const response = await fetch("http://localhost:8000/api/chat", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      prompt: data.get("prompt"),
-    }),
-  });
+  const response = await fetch(
+    "http://localhost:https://intelligent-reverence-production.up.railway.app//api/chat",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        prompt: data.get("prompt"),
+      }),
+    }
+  );
 
   clearInterval(loadInterval);
   messageDiv.innerHTML = " ";
