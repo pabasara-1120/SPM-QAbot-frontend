@@ -149,7 +149,7 @@ const handleSubmit = async (e) => {
   loader(messageDiv);
 
   const response = await fetch(
-    "http://localhost:https://intelligent-reverence-production.up.railway.app//api/chat",
+    "https://intelligent-reverence-production.up.railway.app/",
     {
       method: "POST",
       headers: {
